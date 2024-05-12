@@ -1,7 +1,10 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:first_app/Login.dart';
 import 'package:first_app/RegisterForm.dart';
 import 'package:first_app/Signup.dart';
+import 'package:first_app/firebase_options.dart';
 import 'package:first_app/home.dart';
+import 'package:first_app/pages/add_image.dart';
 import 'package:first_app/pages/api_call.dart';
 import 'package:first_app/pages/create.dart';
 import 'package:first_app/pages/data_list.dart';
@@ -14,6 +17,10 @@ import 'package:shared_preferences/shared_preferences.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   SharedPreferences prefs = await SharedPreferences.getInstance();
+
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const MyApp(
       // token: prefs.getString('token');
       ));
@@ -44,6 +51,7 @@ class MyApp extends StatelessWidget {
         "/apicall": (context) => ApiCall(),
         "/dataList": (context) => Home2(),
         "/createuser": (context) => FormPage2(),
+        "/addimage": (context) => AddImage(),
         "/regForm": (context) => RegisterForm(
               title: 'Student registration form',
             ),

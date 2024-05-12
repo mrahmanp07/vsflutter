@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "546287465837",
+    "project_id": "polin-a2082",
+    "storage_bucket": "polin-a2082.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:546287465837:android:7ee2af64801fe26af61664",
+        "android_client_info": {
+          "package_name": "com.example.first_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA2M_3Xj3lyhLWkJRGyOithklaBXGtIA1A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

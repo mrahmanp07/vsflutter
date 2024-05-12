@@ -110,7 +110,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                             210, 55, 232, 238))))),
                         child: TextButton(
                           onPressed: () {
-                            // Navigator.pushNamed(context, "/home");
+                            Navigator.pushNamed(context, "/home");
                           },
                           child: Container(
                             width: 120,

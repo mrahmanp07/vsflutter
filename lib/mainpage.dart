@@ -91,54 +91,63 @@ class Mainpage1 extends StatelessWidget {
                 padding: EdgeInsets.all(7.0),
                 child: Row(
                   children: [
-                    Container(
-                        // color: Color.fromARGB(255, 62, 201, 243),
-                        height: double.infinity,
-                        width: 65,
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Container(
+                          // color: Color.fromARGB(255, 62, 201, 243),
+                          height: double.infinity,
+                          width: 65,
 
-                        // width: 200,
-                        margin: EdgeInsets.fromLTRB(20, 10, 0, 0),
-                        child: CircleAvatar(
-                          // backgroundColor: Color.fromARGB(255, 212, 240, 187),
-                          backgroundImage: AssetImage("Asset/javalogo.png"),
-                        )),
-                    Container(
-                        // color: Color.fromARGB(255, 62, 201, 243),
-                        height: double.infinity,
-                        width: 65,
+                          // width: 200,
+                          margin: EdgeInsets.fromLTRB(20, 10, 0, 0),
+                          child: CircleAvatar(
+                            // backgroundColor: Color.fromARGB(255, 212, 240, 187),
+                            backgroundImage: AssetImage("Asset/javalogo.png"),
+                          )),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Container(
+                          // color: Color.fromARGB(255, 62, 201, 243),
+                          height: double.infinity,
+                          width: 65,
 
-                        // width: 200,
-                        margin: EdgeInsets.fromLTRB(20, 10, 0, 0),
-                        child: CircleAvatar(
-                          // backgroundColor: Color.fromARGB(255, 212, 240, 187),
-                          backgroundImage: AssetImage("Asset/c#.png"),
-                        )),
-                    Container(
+                          // width: 200,
+                          margin: EdgeInsets.fromLTRB(20, 10, 0, 0),
+                          child: CircleAvatar(
+                            // backgroundColor: Color.fromARGB(255, 212, 240, 187),
+                            backgroundImage: AssetImage("Asset/c#.png"),
+                          )),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Container(
 
-                        // color: Color.fromARGB(255, 62, 201, 243),
-                        height: double.infinity,
-                        width: 65,
+                          // color: Color.fromARGB(255, 62, 201, 243),
+                          height: double.infinity,
+                          width: 65,
 
-                        // width: 200,
-                        margin: EdgeInsets.fromLTRB(20, 10, 0, 0),
-                        child: CircleAvatar(
-                          // backgroundColor: Color.fromARGB(255, 212, 240, 187),
-                          backgroundImage: AssetImage("Asset/python.png"),
-                        )),
+                          // width: 200,
+                          margin: EdgeInsets.fromLTRB(20, 10, 0, 0),
+                          child: CircleAvatar(
+                            // backgroundColor: Color.fromARGB(255, 212, 240, 187),
+                            backgroundImage: AssetImage("Asset/python.png"),
+                          )),
+                    ),
                     TextButton(
                       child: Container(
                           // color: Color.fromARGB(255, 62, 201, 243),
                           height: double.infinity,
-                          width: 90,
+                          width: 65,
 
                           // width: 200,
-                          margin: EdgeInsets.fromLTRB(0, 10, 0, 0),
+                          margin: EdgeInsets.fromLTRB(20, 10, 0, 0),
                           child: CircleAvatar(
                             // backgroundColor: Color.fromARGB(255, 212, 240, 187),
                             backgroundImage: AssetImage("Asset/php.png"),
                           )),
                       onPressed: () {
-                        Navigator.pushNamed(context, "/java");
+                        Navigator.pushNamed(context, "/addimage");
                       },
                     ),
                     TextButton(
@@ -148,15 +157,20 @@ class Mainpage1 extends StatelessWidget {
                       child: Container(
                           // color: Color.fromARGB(255, 62, 201, 243),
                           height: double.infinity,
-                          width: 90,
+                          width: 65,
 
                           // width: 200,
-                          margin: EdgeInsets.fromLTRB(0, 10, 0, 0),
+                          margin: EdgeInsets.fromLTRB(20, 10, 0, 0),
                           child: CircleAvatar(
                             // backgroundColor: Color.fromARGB(255, 212, 240, 187),
                             backgroundImage: AssetImage("Asset/js.png"),
                           )),
                     ),
+                    FloatingActionButton(onPressed: () {
+                      icon:
+                      const Icon(Icons.add);
+                      Navigator.pushNamed(context, "/addimage");
+                    })
                   ],
                 ),
               ),
@@ -264,14 +278,29 @@ class Mainpage1 extends StatelessWidget {
                               fit: BoxFit.cover)),
                     ),
                   ),
-                  Container(
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.all(Radius.circular(20.0)),
-                        image: DecorationImage(
-                            image: NetworkImage(
-                                "https://assets-global.website-files.com/60e615980cab093e6f2db3c3/60f1c6dd76fbf14c6beda3cf_GettyImages-1212945980-p-1080.jpeg"),
-                            fit: BoxFit.cover)),
+
+                  TextButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, "/java");
+                    },
+                    child: Container(
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.all(Radius.circular(20.0)),
+                          image: DecorationImage(
+                              image: NetworkImage(
+                                  "https://assets-global.website-files.com/60e615980cab093e6f2db3c3/60f1c6dd76fbf14c6beda3cf_GettyImages-1212945980-p-1080.jpeg"),
+                              fit: BoxFit.cover)),
+                    ),
                   ),
+
+                  // Container(
+                  //   decoration: BoxDecoration(
+                  //       borderRadius: BorderRadius.all(Radius.circular(20.0)),
+                  //       image: DecorationImage(
+                  //           image: NetworkImage(
+                  //               "https://assets-global.website-files.com/60e615980cab093e6f2db3c3/60f1c6dd76fbf14c6beda3cf_GettyImages-1212945980-p-1080.jpeg"),
+                  //           fit: BoxFit.cover)),
+                  // ),
                   Container(
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.all(Radius.circular(20.0)),

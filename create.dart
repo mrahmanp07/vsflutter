@@ -1,11 +1,10 @@
 import 'dart:convert';
 
-import 'package:flutter/cupertino.dart';
+import 'package:first_app/home.dart';
+import 'package:first_app/model/users.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
-import 'package:shared_preferences_app/model/users.dart';
 import 'package:http/http.dart' as http;
-import 'package:shared_preferences_app/pages/data_list.dart';
 
 class FormPage2 extends StatefulWidget {
   // const FormPage2({Key? key, required this.title}) : super(key: key);
@@ -359,11 +358,12 @@ class _SignUpFormState extends State<SignUpForm> {
         ScaffoldMessenger.of(context)
             .showSnackBar(const SnackBar(content: Text('Form Submitted')));
 
-        Navigator.pushAndRemoveUntil<dynamic>(context,
+        Navigator.pushAndRemoveUntil<dynamic>(
+          context,
           MaterialPageRoute<dynamic>(
-            builder: (BuildContext context) =>Home(),
+            builder: (BuildContext context) => Home(),
           ),
-              (route) =>false,
+          (route) => false,
         );
       }
     }
