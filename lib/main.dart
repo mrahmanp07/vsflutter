@@ -6,6 +6,8 @@ import 'package:first_app/firebase_options.dart';
 import 'package:first_app/home.dart';
 import 'package:first_app/pages/add_image.dart';
 import 'package:first_app/pages/api_call.dart';
+import 'package:first_app/pages/corse-java.dart';
+import 'package:first_app/pages/course-C.dart';
 import 'package:first_app/pages/create.dart';
 import 'package:first_app/pages/data_list.dart';
 import 'package:first_app/pages/java.dart';
@@ -52,6 +54,8 @@ class MyApp extends StatelessWidget {
         "/dataList": (context) => Home2(),
         "/createuser": (context) => FormPage2(),
         "/addimage": (context) => AddImage(),
+        "/javaCourse":(context) => JavaCourse(),
+        "/csharpCourse":(context) => CsharpCourse(),
         "/regForm": (context) => RegisterForm(
               title: 'Student registration form',
             ),

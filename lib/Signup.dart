@@ -10,8 +10,16 @@ class Signupscreen extends StatefulWidget {
 }
 
 class _SignupscreenState extends State<Signupscreen> {
-  TextEditingController emailTextEditingController = TextEditingController();
-  TextEditingController passTextEditingController = TextEditingController();
+  TextEditingController applicantName = TextEditingController();
+  TextEditingController applicantUsername = TextEditingController();
+  TextEditingController applicantPassword = TextEditingController();
+  TextEditingController applicantEmail = TextEditingController();
+  TextEditingController applicantPhone = TextEditingController();
+  TextEditingController applicantNid = TextEditingController();
+  TextEditingController applicantDesignation = TextEditingController();
+  TextEditingController applicantWorkplace = TextEditingController();
+  
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -54,6 +62,7 @@ class _SignupscreenState extends State<Signupscreen> {
                       height: 1.0,
                     ),
                     TextField(
+                      controller: applicantName,
                       keyboardType: TextInputType.name,
                       decoration: InputDecoration(
                           labelText: "Full Name",
@@ -63,7 +72,17 @@ class _SignupscreenState extends State<Signupscreen> {
                           hintStyle: TextStyle()),
                     ),
                     TextField(
-                      controller: emailTextEditingController,
+                      controller: applicantUsername,
+                      keyboardType: TextInputType.streetAddress,
+                      decoration: InputDecoration(
+                          labelText: "Address",
+                          labelStyle: TextStyle(
+                            fontSize: 20.0,
+                          ),
+                          hintStyle: TextStyle()),
+                    ),
+                    TextField(
+                      controller: applicantEmail,
                       keyboardType: TextInputType.emailAddress,
                       decoration: InputDecoration(
                           labelText: "Email",
@@ -73,7 +92,7 @@ class _SignupscreenState extends State<Signupscreen> {
                           hintStyle: TextStyle()),
                     ),
                     TextField(
-                      controller: passTextEditingController,
+                      controller: applicantPassword,
                       keyboardType: TextInputType.visiblePassword,
                       obscureText: true,
                       decoration: InputDecoration(
@@ -83,6 +102,7 @@ class _SignupscreenState extends State<Signupscreen> {
                           )),
                     ),
                     TextField(
+                      controller: applicantPhone,
                       keyboardType: TextInputType.number,
                       decoration: InputDecoration(
                           labelText: "Phone Number",
@@ -92,9 +112,11 @@ class _SignupscreenState extends State<Signupscreen> {
                           hintStyle: TextStyle()),
                     ),
                     TextField(
-                      keyboardType: TextInputType.streetAddress,
+                      controller: applicantNid,
+                      
+                      keyboardType: TextInputType.datetime,
                       decoration: InputDecoration(
-                          labelText: "Address",
+                          labelText: "Date of birth",
                           labelStyle: TextStyle(
                             fontSize: 20.0,
                           ),
@@ -105,11 +127,11 @@ class _SignupscreenState extends State<Signupscreen> {
                     ),
                     TextButton(
                         onPressed: () {
-                          if (!emailTextEditingController.text.contains("@")) {
+                          if (!applicantEmail.text.contains("@")) {
                             displayToastMessage(
                               "Invalid Email aaddress!",
                             );
-                          } else if (passTextEditingController.text.length <
+                          } else if (applicantPassword.text.length <
                               6) {
                             displayToastMessage(
                               "Invalid Password",
@@ -172,4 +194,18 @@ class _SignupscreenState extends State<Signupscreen> {
 
 displayToastMessage(String message) {
   Fluttertoast.showToast(msg: message);
+}
+
+getCurrentDate() {
+var date = DateTime.now().toString();
+
+var dateParse = DateTime.parse(date);
+
+var formattedDate = "${dateParse.day}-${dateParse.month}-${dateParse.year}";
+
+setState(() {
+  var finalDate = formattedDate.toString();
+});}
+
+void setState(Null Function() param0) {
 }

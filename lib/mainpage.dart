@@ -82,6 +82,10 @@ class Mainpage1 extends StatelessWidget {
             //   ),
             // )),
 
+            // Center(
+            //   child: const Text("Our Online Courses: "),
+            // ),
+
             Container(
               color: Color.fromARGB(169, 252, 252, 252),
               height: 100,
@@ -91,34 +95,46 @@ class Mainpage1 extends StatelessWidget {
                 padding: EdgeInsets.all(7.0),
                 child: Row(
                   children: [
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Container(
-                          // color: Color.fromARGB(255, 62, 201, 243),
-                          height: double.infinity,
-                          width: 65,
+                    TextButton(
+                      child: Padding(
+                        padding: const EdgeInsets.all(0.0),
+                        child: Container(
+                            // color: Color.fromARGB(255, 62, 201, 243),
+                            height: double.infinity,
+                            width: 65,
 
-                          // width: 200,
-                          margin: EdgeInsets.fromLTRB(20, 10, 0, 0),
-                          child: CircleAvatar(
-                            // backgroundColor: Color.fromARGB(255, 212, 240, 187),
-                            backgroundImage: AssetImage("Asset/javalogo.png"),
-                          )),
+                            // width: 200,
+                            margin: EdgeInsets.fromLTRB(20, 10, 0, 0),
+                            child: CircleAvatar(
+                              // backgroundColor: Color.fromARGB(255, 212, 240, 187),
+                              backgroundImage: AssetImage("Asset/javalogo.png"),
+                            )),
+                      ),
+                      onPressed: () {
+                        Navigator.pushNamed(context, "/javaCourse");
+                      },
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Container(
-                          // color: Color.fromARGB(255, 62, 201, 243),
-                          height: double.infinity,
-                          width: 65,
 
-                          // width: 200,
-                          margin: EdgeInsets.fromLTRB(20, 10, 0, 0),
-                          child: CircleAvatar(
-                            // backgroundColor: Color.fromARGB(255, 212, 240, 187),
-                            backgroundImage: AssetImage("Asset/c#.png"),
-                          )),
+                    TextButton(
+                      child: Padding(
+                        padding: const EdgeInsets.all(0.0),
+                        child: Container(
+                            // color: Color.fromARGB(255, 62, 201, 243),
+                            height: double.infinity,
+                            width: 65,
+
+                            // width: 200,
+                            margin: EdgeInsets.fromLTRB(20, 10, 0, 0),
+                            child: CircleAvatar(
+                              // backgroundColor: Color.fromARGB(255, 212, 240, 187),
+                              backgroundImage: AssetImage("Asset/c#.png"),
+                            )),
+                      ),
+                      onPressed: () {
+                        Navigator.pushNamed(context, "/csharpCourse");
+                      },
                     ),
+
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Container(
